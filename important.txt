@@ -1,0 +1,9 @@
+1. If you have any problem regarding opening linux do this:
+
+	- in the menu of selecting between ubuntu, windows etc.. press e on the ubuntu option
+	- now go the the second last line and type at the end "nomodset"
+	- press CTRL and X
+
+2. You should install google chrome
+
+3. Install anaconda
