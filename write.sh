@@ -2,6 +2,13 @@
 
 read -r -p "write the command: " userval
 
-echo $userval >> linuxconfiguration.txt
+var2=1
+
+cleanline=$(awk -v var="clean" 'p=index($0,var){print NR}' linuxconfiguration.txt)
+
+cleanline2=$(($cleanline - $var2))
+
+
+sed -i "$cleanline2 i $userval" linuxconfiguration.txt
 
 echo "ready!"

@@ -1,27 +1,47 @@
 #!/bin/bash
 
 sudo apt update -y
+
 sudo apt upgrade -y
+
 sudo apt install terminator -y
+
 sudo apt install git -y
+
 sudo apt install net-tools -y
+
 sudo snap install intellij-idea-comunity --classic
+
 sudo snap install discord
+
 sudo apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils -y
+
 sudo adduser alex libvirt
+
 sudo adduser alex kvm
+
 sudo apt install virt-manager -y
+
 sudo apt install figlet
+
+sudo apt install wireshark -y
+
+sudo apt install gparted -y
 
 # clean
 sudo find /var/ -size +10M -ls | sort -n -r -k 7
-sudo truncate -s 0 /var/log/syslog
-sudo journalctl --disk-usage
-sudo journalctl --rotate
-sudo journalctl --vacuum-time=1s
-sudo journalctl --rotate --vacuum-size=500M
-sudo snap list --all | while read snapname ver rev trk pub notes; do if [[ $notes = *disabled* ]]; then snap remove "$snapname" --revision="$rev"; fi; done
 
+sudo truncate -s 0 /var/log/syslog
+
+sudo journalctl --disk-usage
+
+sudo journalctl --rotate
+
+sudo journalctl --vacuum-time=1s
+
+sudo journalctl --rotate --vacuum-size=500M
+
+sudo snap list --all | while read snapname ver rev trk pub notes; do if [[ $notes = *disabled* ]]; then snap remove "$snapname" --revision="$rev"; fi; done
 
 # print important and shutdown
 

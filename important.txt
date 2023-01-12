@@ -7,3 +7,5 @@
 2. You should install google chrome
 
 3. Install anaconda
+
+4. Install MsTeams
