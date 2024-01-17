@@ -27,6 +27,19 @@ sudo apt install figlet
 sudo apt install wireshark -y
 
 sudo apt install gparted -y
+sudo apt install flatpak
+flatpak --user remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+sudo reboot
+flatpak install flathub com.discordapp.Discord
+flatpak install flathub com.jgraph.drawio.desktop
+flatpak install flathub org.videolan.VLC
+flatpak install flathub us.zoom.Zoom
+flatpak install flathub com.simplenote.Simplenote
+flatpak update -y
+flatpak install flathub org.qbittorrent.qBittorrent
+sudo apt install nmap
+flatpak install flathub com.getpostman.Postman
+flatpak install flathub com.spotify.Client
 
 # clean
 sudo find /var/ -size +10M -ls | sort -n -r -k 7
