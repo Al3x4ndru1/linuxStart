@@ -6,13 +6,7 @@ sudo apt upgrade -y
 
 sudo apt install terminator -y
 
-sudo apt install git -y
-
 sudo apt install net-tools -y
-
-sudo snap install intellij-idea-comunity --classic
-
-sudo snap install discord
 
 sudo apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils -y
 
@@ -40,6 +34,7 @@ flatpak install flathub org.qbittorrent.qBittorrent
 sudo apt install nmap
 flatpak install flathub com.getpostman.Postman
 flatpak install flathub com.spotify.Client
+git clone https://github.com/athityakumar/colorls.git
 
 # clean
 sudo find /var/ -size +10M -ls | sort -n -r -k 7
@@ -56,7 +51,7 @@ sudo journalctl --rotate --vacuum-size=500M
 
 sudo snap list --all | while read snapname ver rev trk pub notes; do if [[ $notes = *disabled* ]]; then snap remove "$snapname" --revision="$rev"; fi; done
 
-# print important and shutdown
+print important and shutdown
 
 sudo ./see.sh
 
